@@ -10,7 +10,9 @@ const ListContainer = () => {
         style={styles.input}
         placeholder="New Item" 
         value={textValue}
-        onChangeText={}/>
+        onChangeText={}
+        />
+        <Button></Button>
       
       </View>
     </View>
