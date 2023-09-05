@@ -1,4 +1,6 @@
-import { Button, Modal as NewModal, StyleSheet, Text, View} from 'react-native'
+import { Modal as NewModal, StyleSheet, Text, View} from 'react-native'
+
+import Button from './Button'
 
 
 const Modal = ({ modalVisible, onHandleDelete}) => {
@@ -10,7 +12,7 @@ const Modal = ({ modalVisible, onHandleDelete}) => {
             <Text>Mi modal</Text>
           </View>
           <View style={styles.modalMessage}>
-            <Button title='confirmar' onPress={onHandleDelete}></Button>
+            <Button/>
           </View>
         </View>
       </View>
@@ -43,6 +45,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   modalMessage: {
-    
-  }
+    marginBottom: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalButton: {
+    marginTop: 15,
+  },
 })

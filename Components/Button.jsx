@@ -1,24 +1,10 @@
-import { useState } from "react";
-import { Button } from "react-native";
+import React from 'react';
 
-const Button = ({title}) => {
-
-  const [itemsList, setItemsList] = useState([])
-  const [textValue, setTextValue] = useState('')
-
-  const addItem = () => {
-    if (textValue === '') {
-      return
-    }
-    setItemsList(prevState => [
-      ...prevState,
-      {id: Math.random(), value: textValue},
-    ])
-    setTextValue('')
-  }
-
+const Button = () => {
   return (
-    <Button title='ADD' color={'#000'} onPress={addItem} />
+    
+      <Button title='confirmar' onPress={onHandleDelete}></Button>
+  
   );
 }
 

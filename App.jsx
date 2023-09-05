@@ -1,24 +1,11 @@
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import ListContainer from "./Components/ListContainer";
 
-export default function App() {
+const App = () => {
   return (
-    <View>
-      <View>
-        <TextInput />
-        <Button title='ADD' />
-      </View>
-      <View>
-        
-      </View>
-    </View>
+    <>
+    <ListContainer />
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
