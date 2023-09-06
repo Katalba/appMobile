@@ -1,11 +1,18 @@
-import React from 'react';
+import { StyleSheet } from "react-native";
 
-const Button = () => {
+const Button = ({title}) => {
   return (
     
-      <Button title='confirmar' onPress={onHandleDelete}></Button>
+      <Button style={styles.borrar} title='confirmar' ></Button>
   
+      
   );
 }
 
 export default Button;
+
+const styles = StyleSheet.create({
+  borrar: {
+    color: 'green'
+  }
+})

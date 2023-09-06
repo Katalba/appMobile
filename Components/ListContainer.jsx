@@ -16,7 +16,7 @@ const ListContainer = () => {
     if (textValue === '') {
       return
     }
-    console.log('ejecuta la funcion de agregar elemnto')
+    console.log('ejecuta la funcion de agregar elemento')
     setItemsList(prevState => [
       ...prevState,
       { id: Math.random(), value: textValue },
@@ -47,16 +47,17 @@ const ListContainer = () => {
   }
 
   return (
+    <>
+    <Text style={styles.title}>Lista de nombres</Text>
     <View style={styles.container}>
-      <Text style={styles.title}>Shopping List</Text>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
-          placeholder="New Item"
+          placeholder="Escriba un nombre"
           value={textValue}
           onChangeText={onHandleChangeItem}
         />
-        <Button title="+ ADD" color={'#000'} onPress={addItem} />
+        <Button title="Agregar" color={'black'}  onPress={addItem}></Button>
       </View>
       <View style={styles.listContainer}>
         <FlatList
@@ -67,6 +68,7 @@ const ListContainer = () => {
       </View>
       <Modal modalVisible={modalVisible} onHandleDelete={onHandleDelete} />
     </View>
+    </>
   )
 }
 
@@ -77,13 +79,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 30,
-    paddingTop: 80,
-    backgroundColor: '#e2c6ab',
+    backgroundColor: '#331039',
   },
   title: {
+    color: '#fff',
     fontSize: 35,
     fontWeight: '500',
-    marginBottom: 25,
+    backgroundColor: '#331039',
+    textAlign: 'center',
+    paddingTop: 80,
+    textTransform: 'uppercase',
   },
   inputContainer: {
     borderRadius: 10,
@@ -97,6 +102,7 @@ const styles = StyleSheet.create({
     height: 50,
     fontSize: 17,
     paddingLeft: 12,
+    
   },
   listContainer: {
     marginTop: 25,
@@ -107,7 +113,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     borderRadius: 10,
     justifyContent: 'center',
-    backgroundColor: '#fe6855',
+    backgroundColor: '#F79EBA',
     shadowColor: '#fe6855',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.5,
@@ -120,5 +126,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '600',
     fontVariant: 'no-common-ligatures',
+    textAlign: 'center',
   },
 })

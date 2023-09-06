@@ -1,6 +1,5 @@
-import { Modal as NewModal, StyleSheet, Text, View} from 'react-native'
+import { Modal as NewModal, Button as Btn, StyleSheet, Text, View} from 'react-native'
 
-import Button from './Button'
 
 
 const Modal = ({ modalVisible, onHandleDelete}) => {
@@ -9,10 +8,10 @@ const Modal = ({ modalVisible, onHandleDelete}) => {
       <View style={styles.modalContainer}>
         <View style={styles.modalContent}>
           <View style={styles.modalTitle}>
-            <Text>Mi modal</Text>
+            <Text style={styles.deseaBorrar}>¿Desea eliminar este nombre de la lista?</Text>
           </View>
           <View style={styles.modalMessage}>
-            <Button/>
+            <Btn title='Eliminar' onPress={onHandleDelete}/>
           </View>
         </View>
       </View>
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   modalContent: {
-    backgroundColor: 'blue',
+    backgroundColor: '#fff',
     borderRadius: 20,
     padding: 35,
     alignItems: 'center',
@@ -43,6 +42,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#ccc',
     color: '#fff',
     fontSize: 18,
+  },
+  deseaBorrar: {
+    fontSize: 18,
+    
   },
   modalMessage: {
     marginBottom: 15,
